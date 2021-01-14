@@ -2,10 +2,10 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 import styled from 'styled-components'
 
-const Form = () => {
+const RightColumn = () => {
   const { register, handleSubmit, errors } = useForm()
   const onSubmit = data => console.log(data)
-  console.log(errors)
+  console.log(`errors ${errors}`)
   
   return (
     <StyledForm onSubmit={handleSubmit(onSubmit)}>
@@ -15,16 +15,16 @@ const Form = () => {
 
         <CosTamContainer>
             <InputContainer>
-                <label htmlFor="First name">First name <span>*</span></label>
-                <input type="text" placeholder="First name" name="First name" ref={register({required: true, maxLength: 80})} />
+                <label htmlFor="FirstName">First name <span>*</span></label>
+                <input id="FirstName" type="text" placeholder="First name" name="First name" ref={register({required: true, maxLength: 80})} />
             </InputContainer>
             <InputContainer>
-                <label htmlFor="Last name">Last Name <span>*</span></label>
-                <input type="text" placeholder="Last name" name="Last name" ref={register({required: true, maxLength: 100})} />
+                <label htmlFor="LastName">Last Name <span>*</span></label>
+                <input id="LastName" type="text" placeholder="Last name" name="Last name" ref={register({required: true, maxLength: 100})} />
             </InputContainer>
             <InputContainer>    
                 <label htmlFor="Email">Email Address <span>*</span></label>
-                <input type="text" placeholder="Email" name="Email" ref={register({required: true, pattern: /^\S+@\S+$/i})} />
+                <input id="Email" type="text" placeholder="Email" name="Email" ref={register({required: true, pattern: /^\S+@\S+$/i})} />
             </InputContainer>
         </CosTamContainer>
 
@@ -32,13 +32,13 @@ const Form = () => {
         <p>Feel free to ask a question or simply leave a comment. <span>*</span></p>
 
         <label htmlFor="Message">Comments / Questions *</label>
-        <textarea type="text" name="Message"></textarea>
+        <textarea id="Message" type="text" name="Message"></textarea>
 
       <input type="submit" name="submit" value="Send Message"/>
     </StyledForm>
   )
 }
-export default Form
+export default RightColumn
 
 const StyledForm = styled.form`
     display: flex;

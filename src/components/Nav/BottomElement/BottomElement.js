@@ -7,8 +7,8 @@ const BottomElement = () => {
         <Container>
             <div> Gansa starter kit</div>
             <Ul>
-                <li><a href="#">abecadlo</a></li>
-                <li><a href="#">z pieca</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/kontakt">Kontakt</a></li>
                 <li><a href="#">spadlo</a></li>
                 <li><a href="#">#</a></li>
             </Ul>

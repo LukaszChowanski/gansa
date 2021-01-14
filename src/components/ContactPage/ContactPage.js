@@ -3,20 +3,20 @@ import styled from 'styled-components'
 
 import Header from './Header/Header'
 import Section from './Section/Section'
-import Map from './Map/Map.js'
+import MapSection from './MapSection/MapSection.js'
 
-const Main = () => {
+const ContactPage = () => {
     return(
         <Container>
             <Header/>
             <Section/>
-            {/* <Map/> */}
+            <MapSection/>
         </Container>
 
     )
 }
 
-export default Main
+export default ContactPage
 
 const Container = styled.div`
     width: 100%;
